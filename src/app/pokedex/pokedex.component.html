@@ -9,11 +9,25 @@
 
 
   <p>
-    <strong>Pokemon Name</strong>: {{this.pickedPokemon[0].name}}
+    <strong>Pokemon Name</strong>: {{this.selectedPokemon.name}}
   </p>
   <p>
-    <strong>Id</strong>: {{this.pickedPokemon[0].id}}
+    <strong>Id</strong>: {{this.selectedPokemon.id}}
   </p>
 
-  <img src="{{this.pickedPokemon[0].sprites.front_default}}" />
+  <img src="{{this.selectedPokemon.sprites.front_default}}" />
+</div>
+
+<div class="align-center">
+  <button class="toggle-pokemon-btn" (click)="this.togglePokemon()">Toggle List of Selected Pokemon</button>
+</div>
+
+<div class="pokemon-list-container" *ngIf="this.showPokemon == true">
+  <div *ngFor="let pokemon of this.pickedPokemon">
+    <div>
+      {{pokemon.name}}
+      <img src="{{pokemon.sprites.front_default}}" />
+      <hr />
+    </div>
+  </div>
 </div>
