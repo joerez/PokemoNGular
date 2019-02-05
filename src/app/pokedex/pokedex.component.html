@@ -1,0 +1,19 @@
+<div class="search-box">
+  <input class="search" placeholder="Put in a name or ID" type="text" #pokemonId />
+  <button class="search-btn" (click)="getPokemon(pokemonId.value)">
+    Load Pokemon
+  </button>
+</div>
+
+<div class="pokemon-info">
+
+
+  <p>
+    <strong>Pokemon Name</strong>: {{this.pickedPokemon[0].name}}
+  </p>
+  <p>
+    <strong>Id</strong>: {{this.pickedPokemon[0].id}}
+  </p>
+
+  <img src="{{this.pickedPokemon[0].sprites.front_default}}" />
+</div>

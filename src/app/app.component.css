@@ -1,0 +1,36 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.top-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  width: 30rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 2px rgba(0,0,0,.3);
+  transition: all 150ms;
+}
+
+.top-container:hover {
+  transform: translateY(-2px);
+}
+
+.top-container h1 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
