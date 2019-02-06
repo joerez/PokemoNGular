@@ -82,11 +82,14 @@
   top: 0rem;
   width: 20rem;
   height: 100vh;
+  overflow-y: scroll;
   background: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  z-index: 100;
+  box-shadow: 0px 0px 1px rgba(0,0,0,.3);
 }
 
 .align-center {
@@ -109,4 +112,31 @@
 
 .toggle-pokemon-btn:hover {
   transform: translateY(-2px);
+}
+
+.listed-pokemon {
+  position: relative;
+  height: 5rem;
+  width: 20rem;
+  box-shadow: 0px 0px 1px rgba(0,0,0,.3);
+  transition: all 150ms;
+  cursor: pointer;
+}
+
+.listed-pokemon:hover {
+  border-left: solid 10px #2980b9;
+  /*color: white;*/
+}
+
+.listed-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.listed-p {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-weight: bold;
 }

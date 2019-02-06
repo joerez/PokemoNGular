@@ -24,10 +24,9 @@
 
 <div class="pokemon-list-container" *ngIf="this.showPokemon == true">
   <div *ngFor="let pokemon of this.pickedPokemon">
-    <div>
-      {{pokemon.name}}
-      <img src="{{pokemon.sprites.front_default}}" />
-      <hr />
+    <div class="listed-pokemon">
+      <p class="listed-p">{{pokemon.name}}</p>
+      <img class="listed-img" src="{{pokemon.sprites.front_default}}" />
     </div>
   </div>
 </div>
